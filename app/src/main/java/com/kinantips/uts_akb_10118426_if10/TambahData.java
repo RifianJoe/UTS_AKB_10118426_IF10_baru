@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 /**
@@ -71,14 +72,14 @@ public class TambahData extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View v = inflater.inflate(R.layout.fragment_tambah_data, container, false);
+        View rL = inflater.inflate(R.layout.fragment_tambah_data, container, false);
 
         handler = new DataHelper(getActivity());
-        NamaNote = (EditText) v.findViewById(R.id.editJudul);
-        TanggalNote = (EditText) v.findViewById(R.id.editTanggal);
-        Keterangan = (EditText) v.findViewById(R.id.editKeterangan);
+        NamaNote = (EditText) rL.findViewById(R.id.editJudul);
+        TanggalNote = (EditText) rL.findViewById(R.id.editTanggal);
+        Keterangan = (EditText) rL.findViewById(R.id.editKeterangan);
 
-        TambahData = (Button) getActivity().findViewById(R.id.btnTambah);
+        TambahData = (Button) rL.findViewById(R.id.btnTambah);
 
         TambahData.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -100,7 +101,7 @@ public class TambahData extends Fragment {
 
 
             }
-        }); return v;
+        }); return rL;
 
     }
 }
