@@ -1,17 +1,20 @@
 package com.kinantips.uts_akb_10118426_if10;
 
 import android.app.Activity;
+import android.app.Dialog;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
+import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -21,6 +24,8 @@ import android.widget.Toast;
  * create an instance of this fragment.
  */
 public class catatan extends Fragment {
+
+    private Button showDialogButton;
 
     protected Cursor cursor;
     DataHelper dbHelper;
@@ -73,9 +78,47 @@ public class catatan extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_catatan, container, false);
+        View v = inflater.inflate(R.layout.fragment_catatan, container, false);
+
+
+        showDialogButton = (Button) v.findViewById(R.id.button2);
+
+        showDialogButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showCustomDialog();
+            }
+        }); return v;
+
+    }
+
+    private void showCustomDialog() {
+        final Dialog dialog = new Dialog(getActivity());
+        //Mengeset judul dialog
+        dialog.setTitle("Add person");
+
+        //Mengeset layout
+        dialog.setContentView(R.layout.fragment_tambah_data);
+
+        //Membuat agar dialog tidak hilang saat di click di area luar dialog
+        dialog.setCanceledOnTouchOutside(true);
+
+        //Membuat dialog agar berukuran responsive
+        DisplayMetrics metrics = getResources().getDisplayMetrics();
+        int width = metrics.widthPixels;
+        dialog.getWindow().setLayout((6 * width) / 7, RelativeLayout.LayoutParams.WRAP_CONTENT);
+
+        Button okButton = (Button) dialog.findViewById(R.id.btnTambah);
+
+        okButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
 
 
 
+        dialog.show();
     }
 }

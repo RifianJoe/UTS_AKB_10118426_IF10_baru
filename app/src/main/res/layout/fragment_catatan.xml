@@ -30,15 +30,12 @@
             />
 
         <Button
-            android:id="@+id/bottom"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            />
-
-        <Button
             android:id="@+id/button2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:backgroundTint="@color/bgColor"
+            android:text="Tambah Data"
+            android:textColor="@color/black"
             android:layout_alignParentBottom="true"
             />
 

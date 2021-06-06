@@ -12,6 +12,9 @@
         >
 
         <TextView
+            android:layout_marginTop="24dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
             android:id="@+id/txtJudul"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -21,15 +24,21 @@
 
         <EditText
             android:id="@+id/editJudul"
+            android:layout_marginTop="24dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/black"
             android:backgroundTint="@color/black"
-            android:layout_below="@id/editJudul"
+            android:layout_below="@id/txtJudul"
             />
 
         <TextView
             android:id="@+id/txtTanggal"
+            android:layout_marginTop="24dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/black"
@@ -38,6 +47,9 @@
             />
         <EditText
             android:id="@+id/editTanggal"
+            android:layout_marginTop="24dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/black"
@@ -47,6 +59,9 @@
             />
         <TextView
             android:id="@+id/txtKeterangan"
+            android:layout_marginTop="24dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/black"
@@ -55,6 +70,9 @@
             />
         <EditText
             android:id="@+id/editKeterangan"
+            android:layout_marginTop="24dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/black"
@@ -63,6 +81,10 @@
             />
         <Button
             android:id="@+id/btnTambah"
+            android:layout_marginTop="24dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginBottom="24dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/black"
