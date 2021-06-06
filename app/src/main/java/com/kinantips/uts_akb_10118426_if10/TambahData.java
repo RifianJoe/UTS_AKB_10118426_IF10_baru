@@ -88,14 +88,14 @@ public class TambahData extends Fragment {
                 String tanggalNotes = TanggalNote.getText().toString().trim();
                 String keterangan = Keterangan.getText().toString().trim();
                 if (namaNotes.equals("") || tanggalNotes.equals("") || keterangan.equals("")){
-                    /*Toast.makeText(TambahData.this, "Pastikan Semua Data Terisi", Toast.LENGTH_LONG).show();*/
+                    Toast.makeText(getActivity(), "Pastikan Semua Data Terisi", Toast.LENGTH_LONG).show();
                 } else {
                     ContentValues values = new ContentValues();
                     values.put(DataHelper.ROW_NAMA_NOTES,namaNotes);
                     values.put(DataHelper.ROW_TANGGAL_NOTES,tanggalNotes);
                     values.put(DataHelper.ROW_KETERANGAN,keterangan);
                     handler.tambahData(values);
-                    /*Toast.makeText(TambahData.this,"Berhasil Input Data", Toast.LENGTH_LONG).show();*/
+                    Toast.makeText(getActivity(),"Berhasil Input Data", Toast.LENGTH_LONG).show();
                 }
 
 
