@@ -80,6 +80,35 @@ public class catatan extends Fragment {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_catatan, container, false);
 
+        /*dbHelper = new DataHelper(getActivity());
+        text1 = (TextView) v.findViewById(R.id.textView1);
+        text2 = (TextView) v.findViewById(R.id.textView2);
+        text3 = (TextView) v.findViewById(R.id.textView3);
+        text4 = (TextView) v.findViewById(R.id.textView4);
+        text5 = (TextView) v.findViewById(R.id.textView5);
+        SQLiteDatabase db = dbHelper.getReadableDatabase();
+        cursor = db.rawQuery("SELECT * FROM biodata WHERE nama = '" +
+                ((Activity) getActivity()).getIntent().getStringExtra("nama") + "'",null);
+        cursor.moveToFirst();
+        if (cursor.getCount()>0)
+        {
+            cursor.moveToPosition(0);
+            text1.setText(cursor.getString(0).toString());
+            text2.setText(cursor.getString(1).toString());
+            text3.setText(cursor.getString(2).toString());
+            text4.setText(cursor.getString(3).toString());
+            text5.setText(cursor.getString(4).toString());
+        }
+        ton2 = (Button) getView().findViewById(R.id.button1);
+        ton2.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View arg0) {
+                // TODO Auto-generated method stub
+
+            }
+        });*/
+
 
         showDialogButton = (Button) v.findViewById(R.id.button2);
 
